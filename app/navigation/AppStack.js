@@ -4,7 +4,7 @@ import { Dimensions, Vibration, Alert } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { showMessage } from 'react-native-flash-message';
 import { useNavigation } from '@react-navigation/native';
-import { MAIN_HomeScreen } from '../screens/main';
+import { Account_List } from '../screens/main';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
@@ -17,9 +17,9 @@ const App_ = () => {
 
     return (
         <Stack.Navigator
-            initialRouteName="MAIN_HomeScreen"
+            initialRouteName="Account_List"
             screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="MAIN_HomeScreen" component={MAIN_HomeScreen} />
+            <Stack.Screen name="Account_List" component={Account_List} />
         </Stack.Navigator>
     );
 };

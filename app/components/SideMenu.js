@@ -44,7 +44,7 @@ const SideBar = (props) => {
                     itemKey={'A'}
                     selectKey={selectKey}
                     setSelectKey={setSelectKey}
-                    navigate={'MAIN_HomeScreen'}
+                    navigate={'Account_List'}
                     item={{}}
                     icon={'home'}
                     title={'Trang chủ'}
