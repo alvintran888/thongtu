@@ -63,6 +63,10 @@ const Account_List = () => {
       name: 'Tài khoản XĐB kết quả kinh doanh',
       amount: 100
     },
+    {
+      name: 'Tài khoản XĐB kết quả kinh',
+      amount: 2500
+    },
   ]);
 
   return (
