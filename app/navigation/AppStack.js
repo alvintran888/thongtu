@@ -5,11 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { showMessage } from 'react-native-flash-message';
 import { useNavigation } from '@react-navigation/native';
 import { Account_List } from '../screens/main';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
-
-const Drawer = createDrawerNavigator();
 
 const App_ = () => {
     const navigation = useNavigation();

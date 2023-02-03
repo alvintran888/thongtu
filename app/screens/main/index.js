@@ -3,5 +3,5 @@ import AccountItem from './AccountItem';
 
 export {
     Account_List, 
-    AccountItem
+    AccountItem,
 }
