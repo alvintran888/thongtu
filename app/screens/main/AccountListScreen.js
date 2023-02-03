@@ -1,4 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, {useState} from 'react';
 import {
   View,
@@ -12,9 +14,10 @@ import {colors} from 'react-native-elements';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5Pro';
 import AccountItem from './AccountItem';
 
-const Account_List = () => {
+  const Stack = createNativeStackNavigator();
+  const AccountListScreen = () => {
   const navigation = useNavigation();
-  const [account, setFood] = useState([
+  const [account] = useState([
     {
       name: 'Tài khoản tài sản',
       amount: 33
@@ -70,9 +73,12 @@ const Account_List = () => {
   ]);
 
   return (
+
+    
+
       <View style={{flex: 1}}>
         {/* header */}
-        <View style={{height: 60, backgroundColor: '#2EAA8A'}}>
+        <View style={{height: '9%', backgroundColor: '#2EAA8A'}}>
           <View
             style={{
               flexDirection: 'row',
@@ -92,8 +98,8 @@ const Account_List = () => {
                 <FontAwesome name={'bars'} color="#FFF" size={20} />
               </TouchableOpacity>
             </View>
-            {/*  */}
 
+            {/*  */}
             <View style={{flex: 6, marginLeft: 30}}>
               <Text style={{color: colors.white, fontSize: 20}}>
                 Hệ thống tài khoản kế toán
@@ -125,9 +131,15 @@ const Account_List = () => {
           {/* </View> */}
           
         </View>
+        <NavigationContainer>
+      <Stack.Navigator initialRouteName="AccountListScreen">
+        <Stack.Screen name="AccountListScreen" component={AccountListScreen} />
+        <Stack.Screen name="AccountDetailScreen" component={AccountDetailScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
       </View>
   );
 };
 
-export default Account_List;
+export default AccountListScreen;
 const styles = StyleSheet.create({});

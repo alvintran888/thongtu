@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { Account_List } from '../screens/main';
+import { AccountListScreen } from '../screens/main';
 
 function HomeScreen({ navigation }) {
   return (
@@ -28,8 +28,8 @@ const Drawer = createDrawerNavigator();
 export default function AppDrawer() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Account_List">
-        <Drawer.Screen name="Account_List" component={Account_List} />
+      <Drawer.Navigator initialRouteName="AccountListScreen">
+        <Drawer.Screen name="AccountListScreen" component={AccountListScreen} />
         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
       </Drawer.Navigator>
     </NavigationContainer>

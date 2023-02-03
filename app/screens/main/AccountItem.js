@@ -13,6 +13,10 @@ const AccountItem = (props) => {
   let {name, amount} = props.account;
   return (
     <View style={{flex: 1}}>
+      <TouchableOpacity>
+        onPress = {() => {
+          navigation.navigate('AccountDetailScreen')
+        }}
       <View style={{flexDirection: 'row', flex: 1}}>
         <View style={{flex: 7, padding: 10}}>
           <Text
@@ -44,7 +48,9 @@ const AccountItem = (props) => {
           
         </View>
 
-      </View>
+      </View> 
+      </TouchableOpacity>
+      
       <View style={{height: 2, backgroundColor: '#CFCFCF'}}></View>
     </View>
   );

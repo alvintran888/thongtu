@@ -1,7 +1,9 @@
-import Account_List from './Account_List';
+import AccountListScreen from './AccountListScreen';
 import AccountItem from './AccountItem';
+import AccountDetailScreen from './AccountDetailScreen'
 
 export {
-    Account_List, 
+    AccountListScreen, 
     AccountItem,
+    AccountDetailScreen,
 }
