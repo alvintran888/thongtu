@@ -18,6 +18,7 @@ const App_ = () => {
             initialRouteName="AccountListScreen"
             screenOptions={{ headerShown: false }}>
             <Stack.Screen name="AccountListScreen" component={AccountListScreen} />
+            <Stack.Screen name="AccountDetailScreen" component={AccountDetailScreen} />
         </Stack.Navigator>
     );
 };

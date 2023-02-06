@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
   View,
@@ -9,50 +10,56 @@ import {
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5Pro';
 
-const AccountItem = (props) => {
-  let {name, amount} = props.account;
-  return (
-    <View style={{flex: 1}}>
-      <TouchableOpacity>
-        onPress = {() => {
-          navigation.navigate('AccountDetailScreen')
-        }}
-      <View style={{flexDirection: 'row', flex: 1}}>
-        <View style={{flex: 7, padding: 10}}>
-          <Text
-            style={{
-              color: 'black',
-              fontSize: 20,
-              marginTop: 10
-            }}>{name}</Text>
-        </View>
+const AccountItem = props => {
+  let {name, childcount} = props.account;
+  const navigation = useNavigation();
 
-        <View style={{flex: 3, justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}}>
+  return (
+    <TouchableOpacity style={{flex: 1}} onPress={() => {
+      navigation.navigate('AccountDetailScreen', {dataChiTiet: name});
+    }}>
+        <View style={{flexDirection: 'row', flex: 1}}>
+
+          <View style={{flex: 7, padding: 20}}>
+            <Text
+              style={{
+                color: 'black',
+                fontSize: 20,
+                marginTop: 10,
+              }}>
+              {name}
+            </Text>
+          </View>
 
           <View
             style={{
-              height: 30,
-              width: 50,
+              flex: 3,
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: '#44474C',
-              borderRadius: 20
+              flexDirection: 'row',
             }}>
-            <Text style={{color: 'white',fontSize: 18}}>{amount}</Text>
-          </View>
+
+            <View
+              style={{
+                height: 30,
+                width: 50,
+                justifyContent: 'center',
+                alignItems: 'center',
+                backgroundColor: '#44474C',
+                borderRadius: 20,
+              }}>
+              <Text style={{color: 'white', fontSize: 18}}>{childcount}</Text>
+            </View>
 
             {/* mui ten */}
-          <View style={{ marginLeft: 20}}>
-            <FontAwesome name={'chevron-right'} color="#A8A8A8" size={20}  />
+            <View style={{marginLeft: 20}}>
+              <FontAwesome name={'chevron-right'} color="#A8A8A8" size={20} />
+            </View>
           </View>
-          
-        </View>
 
-      </View> 
-      </TouchableOpacity>
-      
+        </View>
       <View style={{height: 2, backgroundColor: '#CFCFCF'}}></View>
-    </View>
+    </TouchableOpacity>
   );
-}
+};
 export default AccountItem;
