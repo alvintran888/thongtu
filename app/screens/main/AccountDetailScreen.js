@@ -48,15 +48,23 @@ const AccountDetailScreen = () => {
           </View>
         </View>
       </View>
-        <TouchableOpacity style={{flex:1, backgroundColor:'#F89'}}>
-              <View style={{flexDirection:'row', justifyContent:'space-between', }}>
+        <TouchableOpacity style={{  }}>
+              <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between' }}>
               {/* bentrai */}
-              <View style={{height:'100%', width:'40%', backgroundColor:'#FFF', padding: 20}}>
+              <View style={{flex:2,height:'100%', width:'40%', backgroundColor:'#FFF', padding: 10}}>
+
+                <View style={{flex:1, backgroundColor: 'green', justifyContent:'center', alignItems:''}}>
+                  <Text style={{color:'white'}}>Tiền mặt</Text>
+                </View>
+
+                <View style={{marginTop:5,flex:1, backgroundColor: 'black', alignItems:'center'}}>
+                  <Text style={{color:'white'}}>Số Hiệu: </Text>
+                </View>
 
               </View>
 
             {/* benphai */}
-              <View style={{height:60, width:'30%', backgroundColor:'#FFF'}}>
+              <View style={{height:60, width:'30%', backgroundColor:'#F89'}}>
 
               </View>
 
