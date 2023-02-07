@@ -1,20 +1,21 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {View, Text, TouchableOpacity, StyleSheet, Flatlist} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5Pro';
 import {colors} from 'react-native-elements';
 import {useRoute} from '@react-navigation/native';
-import DATA from '../../data/tkkt-133.json';
+import DL133 from '../../data/tkkt-133.json';
 import AccountDetailItem from './AccountDetailItem';
 
 const AccountDetailScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
+  const tk = DL133.item;
   const data = route.params;
 
   const [service, setService] = useState([]);
   useEffect(() => {
-    setService(DATA.item);
+    setService(DL133.item);
   });
 
   return (
@@ -42,34 +43,25 @@ const AccountDetailScreen = () => {
           {/* tim kiem */}
           <View
             style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate();
+              }}>
               <FontAwesome name={'search'} color="white" size={23} />
             </TouchableOpacity>
           </View>
         </View>
       </View>
-        <TouchableOpacity style={{  }}>
-              <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between' }}>
-              {/* bentrai */}
-              <View style={{flex:2,height:'100%', width:'40%', backgroundColor:'#FFF', padding: 10}}>
 
-                <View style={{flex:1, backgroundColor: 'green', justifyContent:'center', alignItems:''}}>
-                  <Text style={{color:'white'}}>Tiền mặt</Text>
-                </View>
-
-                <View style={{marginTop:5,flex:1, backgroundColor: 'black', alignItems:'center'}}>
-                  <Text style={{color:'white'}}>Số Hiệu: </Text>
-                </View>
-
-              </View>
-
-            {/* benphai */}
-              <View style={{height:60, width:'30%', backgroundColor:'#F89'}}>
-
-              </View>
-
-              </View>
-        </TouchableOpacity>
+      <View style={{flex: 1}}>
+        <FlatList
+          data={service}
+          renderItem={({item}) => (
+            <AccountDetailItem service={item} key={item.name} />
+          )}
+          keyExtractor={item => item.name}
+        />
+      </View>
     </View>
   );
 };

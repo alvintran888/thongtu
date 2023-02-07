@@ -11,7 +11,7 @@ import {
 import FontAwesome from 'react-native-vector-icons/FontAwesome5Pro';
 
 const AccountItem = props => {
-  let {name, childcount} = props.account;
+  let {name, childcount} = props.accountNew; //Trang này bị lỗi không phải trang kia xem kĩ nó chỉ ở trang nào 
   const navigation = useNavigation();
 
   return (

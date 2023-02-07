@@ -64,8 +64,8 @@ import DATA from '../../data/group.json';
       <View style={{flex: 1}}>
         <FlatList
           data={accountNew}
-          renderItem={({item}) => (
-            <AccountItem account={item} key={item.name} />
+          renderItem={({item, index}) => (
+            <AccountItem accountNew={item} key={index} />
           )}
           keyExtractor={item => item.name}
         />
