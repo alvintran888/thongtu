@@ -10,10 +10,10 @@ import AccountDetailItem from './AccountDetailItem';
 const AccountDetailScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  const tk = DL133.item;
   const data = route.params;
 
   const [service, setService] = useState([]);
+
   useEffect(() => {
     setService(DL133.item);
   });

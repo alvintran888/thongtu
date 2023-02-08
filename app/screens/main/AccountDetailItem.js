@@ -9,6 +9,7 @@ import {
   FlatList,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5Pro';
+import LastDetailScreen from './LastDetailScreen';
 
 const AccountDetailItem = props => {
   const navigation = useNavigation();
@@ -29,30 +30,27 @@ const AccountDetailItem = props => {
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: 80,
             backgroundColor: '#FFF',
           }}>
           {/* bentrai */}
           <View
             style={{
               flex: 1,
-              height: '100%',
-              width: '40%',
-              // backgroundColor: '#FFF',
-              padding: 10,
+              // backgroundColor: '#F89',
             }}>
-            <View style={{flex: 1, marginLeft: 10, padding: 5}}>
-              <Text style={{color: '#44474C', fontSize: 18}}>{name}</Text>
+
+            <View style={{flex: 1, padding: 5, marginLeft: 15, marginTop: 10}}>
+              <Text style={{color: '#44474C', fontSize: 20}}>{name}</Text>
             </View>
 
             <View
               style={{
-                marginTop: 5,
                 flex: 1,
-                marginLeft: 10,
+                marginLeft: 20,
+                marginBottom: 5,
                 // backgroundColor: 'black',
               }}>
-              <Text style={{color: '#44474C', fontSize: 18, marginLeft: 5}}>
+              <Text style={{color: '#44474C', fontSize: 20}}>
                 Số hiệu: {code}
               </Text>
             </View>

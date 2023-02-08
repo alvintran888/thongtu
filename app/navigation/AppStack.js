@@ -4,7 +4,7 @@ import { Dimensions, Vibration, Alert } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { showMessage } from 'react-native-flash-message';
 import { useNavigation } from '@react-navigation/native';
-import { AccountListScreen, AccountDetailScreen, } from '../screens/main';
+import { AccountListScreen, AccountDetailScreen, LastDetailScreen} from '../screens/main';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +19,7 @@ const App_ = () => {
             screenOptions={{ headerShown: false }}>
             <Stack.Screen name="AccountListScreen" component={AccountListScreen} />
             <Stack.Screen name="AccountDetailScreen" component={AccountDetailScreen} />
+            <Stack.Screen name="LastDetailScreen" component={LastDetailScreen} />
         </Stack.Navigator>
     );
 };
