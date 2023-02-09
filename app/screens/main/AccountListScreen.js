@@ -25,7 +25,7 @@ import DATA from '../../data/group.json';
   return (
     <View style={{flex: 1}}>
       {/* header */}
-      <View style={{height: '9%', backgroundColor: '#2EAA8A'}}>
+      <View style={{height: '9%', backgroundColor: '#006E6D'}}>
         <View
           style={styles.navtong}>
           {/* Taskbars */}
@@ -33,7 +33,7 @@ import DATA from '../../data/group.json';
 
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('');
+                navigation.navigate('SodoScreen');
               }}
               style={{marginLeft: 10, marginTop: 6}}>
               <FontAwesome name={'bars'} color="#FFF" size={25}/>

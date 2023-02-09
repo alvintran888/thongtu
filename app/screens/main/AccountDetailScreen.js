@@ -21,11 +21,13 @@ const AccountDetailScreen = () => {
   return (
     <View style={{flex: 1}}>
       {/* header */}
-      <View style={{height: '10%', backgroundColor: '#2EAA8A'}}>
-        <View style={{flexDirection: 'row', padding: 10, marginTop: 10}}>
+      <View style={{height:83, backgroundColor: '#006E6D', flexDirection: 'row',}}>
+        
           {/* mui ten */}
           <View style={{flex: 1}}>
-            <TouchableOpacity
+            <TouchableOpacity style={{flex:1, 
+                padding:10 ,justifyContent: 'center', 
+                alignItems: 'center'}}
               onPress={() => {
                 navigation.goBack('AccountListScreen');
               }}>
@@ -34,7 +36,8 @@ const AccountDetailScreen = () => {
           </View>
 
           {/* ten */}
-          <View style={{flex: 6, alignItems: 'center'}}>
+          <View style={{flex:5, padding:10, justifyContent: 'center', 
+                alignItems: 'center' }}>
             <Text style={{color: 'white', fontSize: 23}}>
               {data.dataChiTiet}
             </Text>
@@ -42,7 +45,7 @@ const AccountDetailScreen = () => {
 
           {/* tim kiem */}
           <View
-            style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            style={{flex:1, padding:10, justifyContent: 'center', alignItems: 'center' }}>
             <TouchableOpacity
               onPress={() => {
                 navigation.navigate();
@@ -50,7 +53,7 @@ const AccountDetailScreen = () => {
               <FontAwesome name={'search'} color="white" size={23} />
             </TouchableOpacity>
           </View>
-        </View>
+        {/* </View> */}
       </View>
 
       <View style={{flex: 1}}>

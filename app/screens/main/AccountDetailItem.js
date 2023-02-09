@@ -1,5 +1,5 @@
 import {useNavigation} from '@react-navigation/native';
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -9,7 +9,6 @@ import {
   FlatList,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5Pro';
-import LastDetailScreen from './LastDetailScreen';
 
 const AccountDetailItem = props => {
   const navigation = useNavigation();
@@ -58,6 +57,7 @@ const AccountDetailItem = props => {
 
           {/* benphai */}
           <View style={{height: 60, width: '30%'}}>
+
             <View
               style={{
                 flex: 3,
@@ -65,6 +65,7 @@ const AccountDetailItem = props => {
                 alignItems: 'center',
                 flexDirection: 'row',
               }}>
+
               <View
                 style={{
                   height: 30,
@@ -81,8 +82,10 @@ const AccountDetailItem = props => {
               <View style={{marginLeft: 20}}>
                 <FontAwesome name={'chevron-right'} color="#A8A8A8" size={20} />
               </View>
+
             </View>
           </View>
+          
         </View>
       </TouchableOpacity>
       <View style={{height: 2, backgroundColor: '#CFCFCF'}}></View>
