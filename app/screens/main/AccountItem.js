@@ -23,9 +23,10 @@ const AccountItem = props => {
           <View style={{flex: 7, padding: 20}}>
             <Text
               style={{
-                color: 'black',
+                color: '#44474C',
                 fontSize: 20,
-                marginTop: 10,
+                padding:10,
+                
               }}>
               {name}
             </Text>

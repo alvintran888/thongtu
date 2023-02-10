@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity, FlatList, ScrollView} from 'react-native'
 import { useNavigation, useRoute } from "@react-navigation/native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome5Pro';
 import SodoItem from "./SodoItem";
+import DiagramDetail from "./DiagramDetail"
 
 import listsd from '../../data/map.json'
 
@@ -31,7 +32,7 @@ return (
 
             {/* title */}
             <View style={{flex:5, justifyContent: 'center', alignItems: 'center'}}>
-                <Text style={{fontSize: 18, color: "white"}}>
+                <Text style={{fontSize: 23, color: "white"}}>
                     Sơ đồ tổng hợp
                 </Text>
             </View>
@@ -51,7 +52,7 @@ return (
             <FlatList
             data={sodo}
             renderItem={({item, index}) => (
-                <SodoItem sodo ={item} key={index}/>
+                <SodoItem sodo={item} key={index}/>
             )}
             keyExtractor={item => item.mapcode}
             />

@@ -3,7 +3,8 @@ import AccountItem from './AccountItem';
 import AccountDetailScreen from './AccountDetailScreen';
 import AccountDetailItem from './AccountDetailItem'
 import LastDetailScreen from './LastDetailScreen';
-import SodoScreen from './SodoScreen'
+import SodoScreen from './SodoScreen';
+import DiagramDetail from './DiagramDetail';
 
 export {
     AccountListScreen, 
@@ -11,5 +12,6 @@ export {
     AccountDetailScreen,
     AccountDetailItem,
     LastDetailScreen,
-    SodoScreen
+    SodoScreen,
+    DiagramDetail
 }

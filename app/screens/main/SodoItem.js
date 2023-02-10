@@ -4,12 +4,14 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome5Pro';
 
 const SodoItem = props => {
-    const navigation = useNavigation();
-    let {name} = props.sodo
+    const navigation = useNavigation()
+    let {name, url} = props.sodo
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress = {() => {
+            navigation.navigate('DiagramDetail', {tensodo: name, url: url});
+        }} >
             <View style={{padding:20,  paddingLeft: 10}}>
-            <Text style={{fontSize: 16, color:'black'}}>
+            <Text style={{fontSize: 20, color:'#44474C'}}>
                 {name}
             </Text>
         </View>

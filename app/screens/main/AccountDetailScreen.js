@@ -21,7 +21,7 @@ const AccountDetailScreen = () => {
   return (
     <View style={{flex: 1}}>
       {/* header */}
-      <View style={{height:83, backgroundColor: '#006E6D', flexDirection: 'row',}}>
+      <View style={{height:"9%", backgroundColor: '#006E6D', flexDirection: 'row',}}>
         
           {/* mui ten */}
           <View style={{flex: 1}}>
